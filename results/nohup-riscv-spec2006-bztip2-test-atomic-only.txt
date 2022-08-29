@@ -1,0 +1,88 @@
+Global frequency set at 1000000000000 ticks per second
+build/RISCV/mem/dram_interface.cc:690: warn: DRAM device capacity (16384 Mbytes) does not match the address range assigned (2048 Mbytes)
+build/RISCV/mem/dram_interface.cc:690: warn: DRAM device capacity (16384 Mbytes) does not match the address range assigned (2048 Mbytes)
+build/RISCV/sim/kernel_workload.cc:46: info: kernel located at: /home/studyztp/.cache/gem5/riscv-bootloader-vmlinux-5.10
+      0: board.platform.rtc: Real-time clock set to Sun Jan  1 00:00:00 2012
+build/RISCV/dev/serial/terminal.cc:170: warn: Sockets disabled, not accepting terminal connections
+build/RISCV/base/remote_gdb.cc:381: warn: Sockets disabled, not accepting gdb connections
+build/RISCV/arch/riscv/linux/fs_workload.cc:50: info: Loading DTB file: riscv-spec2006-fullrun-bzip2-test-atomic-only-output/device.dtb at address 0x87e00000
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version [DEVELOP-FOR-22.1]
+gem5 compiled Aug 26 2022 20:07:20
+gem5 started Aug 28 2022 17:19:20
+gem5 executing on amarillo, pid 279351
+command line: build/RISCV/gem5.opt --outdir=riscv-spec2006-fullrun-bzip2-test-atomic-only-output/ /home/studyztp/data/SPEC2006-riscv-test/script/fs_fullrun_atomic_only.py --benchmark 401.bzip2 --size test
+
+info: Standard input is not a terminal, disabling listeners.
+warn: The simulate package is still in a beta state. The gem5 project does not guarantee the APIs within this package will remain consistent across upcoming releases.
+build/RISCV/sim/simulate.cc:194: info: Entering event queue @ 0.  Starting simulation...
+build/RISCV/dev/riscv/vio_mmio.cc:216: warn: Ignoring queue resize hint. Requested size: 128
+build/RISCV/arch/riscv/isa.cc:572: warn: 84278519784: context 0: 10000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 117487150578: context 0: 20000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 223564476069: context 0: 30000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 274694215482: context 0: 40000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 313321239126: context 0: 50000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 344923708689: context 0: 60000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 379495234890: context 0: 70000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 415667427489: context 0: 80000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 444182943096: context 0: 90000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 484117827237: context 0: 100000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 551652941520: context 0: 110000 consecutive SC failures.
+build/RISCV/dev/virtio/block.cc:158: warn: Unsupported IO request: 8
+build/RISCV/arch/riscv/isa.cc:572: warn: 590924243241: context 0: 120000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 643206761055: context 0: 130000 consecutive SC failures.
+build/RISCV/dev/virtio/block.cc:158: warn: Unsupported IO request: 8
+build/RISCV/dev/virtio/block.cc:158: warn: Unsupported IO request: 8
+build/RISCV/dev/virtio/block.cc:158: warn: Unsupported IO request: 8
+build/RISCV/dev/virtio/block.cc:158: warn: Unsupported IO request: 8
+build/RISCV/dev/virtio/block.cc:158: warn: Unsupported IO request: 8
+build/RISCV/arch/riscv/isa.cc:572: warn: 691004217753: context 0: 140000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 749057361831: context 0: 150000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 812756313783: context 0: 160000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 876113062614: context 0: 170000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 940862848680: context 0: 180000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 1003945729653: context 0: 190000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 1045273712967: context 0: 200000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 1202008661793: context 0: 210000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 1492287955596: context 0: 220000 consecutive SC failures.
+build/RISCV/dev/virtio/block.cc:158: warn: Unsupported IO request: 8
+build/RISCV/arch/riscv/isa.cc:572: warn: 1540228483413: context 0: 230000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 1567060698339: context 0: 240000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 1670888555550: context 0: 250000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 1725070260276: context 0: 260000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 1785302067510: context 0: 270000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 1847986968528: context 0: 280000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 1911400884801: context 0: 290000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 2004504431391: context 0: 300000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 2194992322488: context 0: 310000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 2240240942574: context 0: 320000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 2298705119208: context 0: 330000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 2778410570238: context 0: 340000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 3024521970813: context 0: 350000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 3667974054966: context 0: 360000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 3710890369026: context 0: 370000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 3770249903073: context 0: 380000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 3895033930137: context 0: 390000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 3934384670673: context 0: 400000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 4251065421258: context 0: 410000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 4304580487290: context 0: 420000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 4333044666951: context 0: 430000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 4371432545979: context 0: 440000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 4392035690544: context 0: 450000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 5582452152807: context 0: 460000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 5939665484904: context 0: 470000 consecutive SC failures.
+build/RISCV/sim/simulate.cc:194: info: Entering event queue @ 6061696935300.  Starting simulation...
+build/RISCV/arch/riscv/isa.cc:572: warn: 6069536218503: context 0: 480000 consecutive SC failures.
+build/RISCV/sim/simulate.cc:194: info: Entering event queue @ 6070264191801.  Starting simulation...
+build/RISCV/arch/riscv/isa.cc:572: warn: 7015359769848: context 0: 490000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 7679058713874: context 0: 500000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 9590277436686: context 0: 510000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 11144116710018: context 0: 520000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 11968896967821: context 0: 530000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 12549093467211: context 0: 540000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 12894806868417: context 0: 550000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 13531721836563: context 0: 560000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 13564175892354: context 0: 570000 consecutive SC failures.
+build/RISCV/arch/riscv/isa.cc:572: warn: 24699312809487: context 0: 580000 consecutive SC failures.
