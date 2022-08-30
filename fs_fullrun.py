@@ -14,11 +14,8 @@ from gem5.isas import ISA
 from gem5.resources.resource import CustomDiskImageResource, Resource
 from gem5.simulate.exit_event import ExitEvent
 from gem5.simulate.simulator import Simulator
-from m5.stats import dump, reset
+
 from pathlib import Path
-from gem5.simulate.exit_event_generators import (
-    simpoint_save_checkpoint_generator,
-)
 from gem5.components.processors.simple_switchable_processor import (
     SimpleSwitchableProcessor,
 )
@@ -38,7 +35,7 @@ from m5.util import warn
 benchmark_choices = [
     "400.perlbench",
     "401.bzip2",
-    "403.gcc",
+    "",
     "410.bwaves",
     "429.mcf",
     "433.milc",
@@ -104,7 +101,7 @@ cache_hierarchy = PrivateL1PrivateL2CacheHierarchy(
     l2_size="256kB",
 )
 
-memory = DualChannelDDR4_2400(size="13GB")
+memory = DualChannelDDR4_2400(size="8GB")
 
 processor = SimpleSwitchableProcessor(
     starting_core_type=CPUTypes.ATOMIC,

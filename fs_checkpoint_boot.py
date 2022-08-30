@@ -16,9 +16,7 @@ from gem5.simulate.exit_event import ExitEvent
 from gem5.simulate.simulator import Simulator
 from m5.stats import dump, reset
 from pathlib import Path
-from gem5.simulate.exit_event_generators import (
-    simpoint_save_checkpoint_generator,
-)
+
 from gem5.components.processors.simple_switchable_processor import (
     SimpleSwitchableProcessor,
 )
@@ -112,7 +110,7 @@ cache_hierarchy = PrivateL1PrivateL2CacheHierarchy(
     l2_size="256kB",
 )
 
-memory = DualChannelDDR4_2400(size="16GB")
+memory = DualChannelDDR4_2400(size="8GB")
 
 processor = SimpleProcessor(
     cpu_type=CPUTypes.ATOMIC,
