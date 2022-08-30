@@ -6,7 +6,7 @@ from gem5.components.boards.riscv_board import RiscvBoard
 from gem5.components.cachehierarchies.classic.private_l1_private_l2_cache_hierarchy import (
     PrivateL1PrivateL2CacheHierarchy,
 )
-from gem5.components.memory import DualChannelDDR4_2400
+from gem5.components.memory import DualChannelDDR4_2400, SingleChannelDDR4_2400
 from gem5.components.processors.cpu_types import CPUTypes
 from gem5.components.processors.simple_processor import SimpleProcessor
 from gem5.utils.simpoint import SimPoint
@@ -110,7 +110,7 @@ cache_hierarchy = PrivateL1PrivateL2CacheHierarchy(
     l2_size="256kB",
 )
 
-memory = DualChannelDDR4_2400(size="8GB")
+memory = SingleChannelDDR4_2400()
 
 processor = SimpleProcessor(
     cpu_type=CPUTypes.ATOMIC,

@@ -104,7 +104,7 @@ cache_hierarchy = PrivateL1PrivateL2CacheHierarchy(
     l2_size="256kB",
 )
 
-memory = DualChannelDDR4_2400(size="3GB")
+memory = DualChannelDDR4_2400()
 
 processor = SimpleProcessor(
     cpu_type=CPUTypes.ATOMIC,

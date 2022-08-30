@@ -103,9 +103,8 @@ cache_hierarchy = PrivateL1PrivateL2CacheHierarchy(
 
 memory = SingleChannelDDR4_2400()
 
-processor = SimpleSwitchableProcessor(
-    starting_core_type=CPUTypes.ATOMIC,
-    switch_core_type=CPUTypes.O3,
+processor = SimpleProcessor(
+    cpu_type=CPUTypes.O3,
     num_cores=1,
     isa=ISA.RISCV,
 )
