@@ -1,0 +1,78 @@
+runspec started at Sun Aug 28 16:42:53 2022 on "ubuntu"
+runspec is: /home/ubuntu/spec2006/mnt/bin/runspec
+runspec: runspec --size test --iterations 1 --config myconfig.cfg --noreportable --nobuild 401.bzip2
+
+Locating benchmarks...found 31 benchmarks in 12 benchsets.
+Locating output formats: ASCII, config, CSV, flags, HTML, mail, PDF, PostScript, raw, Screen, Submission Check
+Reading config file '/home/ubuntu/spec2006/mnt/config/myconfig.cfg'
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = riscv
+Size      = test
+Machine   = default
+benchmarks= 401.bzip2
+outputs   = raw,flags,ASCII,CSV,HTML
+username  = root
+Benchmarks selected: 401.bzip2
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 401.bzip2 test base riscv default
+
+
+Parsing Flags
+  Looking at 401.bzip2 base riscv default: done
+Flag Parsing Complete
+
+Setting Up Run Directories
+  Setting up 401.bzip2 test base riscv default: created (run_base_test_riscv.0001)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running 401.bzip2 test base riscv default
+Commands to run: 
+    -C /home/ubuntu/spec2006/mnt/benchspec/CPU2006/401.bzip2/run/run_base_test_riscv.0001
+    -o input.program.out -e input.program.err ../run_base_test_riscv.0001/bzip2_base.riscv input.program 5
+    -o dryer.jpg.out -e dryer.jpg.err ../run_base_test_riscv.0001/bzip2_base.riscv dryer.jpg 2
+Specinvoke: /home/ubuntu/spec2006/mnt/bin/specinvoke -d /home/ubuntu/spec2006/mnt/benchspec/CPU2006/401.bzip2/run/run_base_test_riscv.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/home/ubuntu/spec2006/mnt/bin/specinvoke -d /home/ubuntu/spec2006/mnt/benchspec/CPU2006/401.bzip2/run/run_base_test_riscv.0001 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Sun Aug 28 16:43:00 2022 (1661704980)
+Stop command: Sun Aug 28 16:43:56 2022 (1661705036)
+Elapsed time for command: 00:00:56 (56)
+Workload elapsed time (0:1) = 16.830424 seconds
+Workload elapsed time (0:2) = 30.915097 seconds
+copy 0 finished @ Sun Aug 28 16:43:48 2022.  Total elapsed time: 47.745521
+comparing files in '/home/ubuntu/spec2006/mnt/benchspec/CPU2006/401.bzip2/run/run_base_test_riscv.0001'
+comparing 'dryer.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.program.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /home/ubuntu/spec2006/mnt/bin/specinvoke -E -d /home/ubuntu/spec2006/mnt/benchspec/CPU2006/401.bzip2/run/run_base_test_riscv.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/home/ubuntu/spec2006/mnt/bin/specinvoke -E -d /home/ubuntu/spec2006/mnt/benchspec/CPU2006/401.bzip2/run/run_base_test_riscv.0001 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Sun Aug 28 16:43:56 2022 (1661705036)
+Stop command: Sun Aug 28 16:43:58 2022 (1661705038)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Sun Aug 28 16:43:00 2022 (1661704980)
+  Stop:     Sun Aug 28 16:43:56 2022 (1661705036)
+  Elapsed:  00:00:56 (56)
+  Reported: 47 745551000 47.745551
+ Success 401.bzip2 base test ratio=-0.00, runtime=47.745551
+Success: 1x401.bzip2
+Producing Reports
+mach: default
+  ext: riscv
+    size: test
+      set: int
+           Flag reduction took 0.0011671s
+        format: raw -> /home/ubuntu/spec2006/mnt/result/CINT2006.002.test.rsf
+        format: flags -> /home/ubuntu/spec2006/mnt/result/CINT2006.002.test.flags.html
+        format: ASCII -> /home/ubuntu/spec2006/mnt/result/CINT2006.002.test.txt
+        format: CSV -> /home/ubuntu/spec2006/mnt/result/CINT2006.002.test.csv
+        format: HTML -> /home/ubuntu/spec2006/mnt/result/CINT2006.002.test.html, CINT2006.002.test.gif
+      set: fp
+
+The log for this run is in /home/ubuntu/spec2006/mnt/result/CPU2006.002.log
+
+runspec finished at Sun Aug 28 16:43:59 2022; 66 total seconds elapsed

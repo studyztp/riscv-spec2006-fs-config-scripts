@@ -1,0 +1,423 @@
+[    0.000000] Linux version 5.10.0 (hn@amarillo) (riscv64-linux-gnu-gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0, GNU ld (GNU Binutils for Ubuntu) 2.30) #1 SMP Mon Jul 19 13:32:59 PDT 2021
+[    0.000000] OF: fdt: Ignoring memory range 0x80000000 - 0x80200000
+[    0.000000] efi: UEFI not found.
+[    0.000000] Zone ranges:
+[    0.000000]   DMA32    [mem 0x0000000080200000-0x00000000ffffffff]
+[    0.000000]   Normal   [mem 0x0000000100000000-0x000000013fffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000080200000-0x000000013fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000080200000-0x000000013fffffff]
+[    0.000000] software IO TLB: mapped [mem 0x00000000fbfff000-0x00000000fffff000] (64MB)
+[    0.000000] SBI specification v0.1 detected
+[    0.000000] riscv: ISA extensions acdfim
+[    0.000000] riscv: ELF capabilities acdfim
+[    0.000000] percpu: Embedded 16 pages/cpu s26200 r8192 d31144 u65536
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 775175
+[    0.000000] Kernel command line: console=ttyS0 root=/dev/vda1 ro
+[    0.000000] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.000000] Sorting __ex_table...
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] Memory: 3015060K/3143680K available (5866K kernel code, 3086K rwdata, 2048K rodata, 189K init, 341K bss, 128620K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=1.
+[    0.000000] 	Tracing variant of Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] riscv-intc: 64 local interrupts mapped
+[    0.000000] plic: plic@c000000: mapped 20 interrupts with 1 handlers for 2 contexts.
+[    0.000000] random: get_random_bytes called from start_kernel+0x316/0x496 with crng_init=0
+[    0.000000] riscv_timer_init_dt: Registering clocksource cpuid [0] hartid [0]
+[    0.000000] clocksource: riscv_clocksource: mask: 0xffffffffffffffff max_cycles: 0x171024e7e0, max_idle_ns: 440795205315 ns
+[    0.000001] sched_clock: 64 bits at 100MHz, resolution 10ns, wraps every 4398046511100ns
+[    0.000026] Console: colour dummy device 80x25
+[    0.000031] Calibrating delay loop (skipped), value calculated using timer frequency.. 200.00 BogoMIPS (lpj=400000)
+[    0.000036] pid_max: default: 32768 minimum: 301
+[    0.000069] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.000076] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.000259] rcu: Hierarchical SRCU implementation.
+[    0.000279] EFI services will not be available.
+[    0.000291] smp: Bringing up secondary CPUs ...
+[    0.000294] smp: Brought up 1 node, 1 CPU
+[    0.000348] devtmpfs: initialized
+[    0.000522] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.000525] futex hash table entries: 256 (order: 2, 16384 bytes, linear)
+[    0.000573] NET: Registered protocol family 16
+[    0.002969] vgaarb: loaded
+[    0.003020] SCSI subsystem initialized
+[    0.003070] usbcore: registered new interface driver usbfs
+[    0.003079] usbcore: registered new interface driver hub
+[    0.003087] usbcore: registered new device driver usb
+[    0.003204] clocksource: Switched to clocksource riscv_clocksource
+[    0.004123] NET: Registered protocol family 2
+[    0.004251] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+[    0.004266] TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.004412] TCP bind hash table entries: 32768 (order: 7, 524288 bytes, linear)
+[    0.004568] TCP: Hash tables configured (established 32768 bind 32768)
+[    0.004582] UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)
+[    0.004610] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)
+[    0.004652] NET: Registered protocol family 1
+[    0.004711] RPC: Registered named UNIX socket transport module.
+[    0.004713] RPC: Registered udp transport module.
+[    0.004715] RPC: Registered tcp transport module.
+[    0.004717] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.004720] PCI: CLS 0 bytes, default 64
+[    0.004810] workingset: timestamp_bits=62 max_order=20 bucket_order=0
+[    0.006437] NFS: Registering the id_resolver key type
+[    0.006441] Key type id_resolver registered
+[    0.006443] Key type id_legacy registered
+[    0.006465] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    0.006513] NET: Registered protocol family 38
+[    0.006518] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 254)
+[    0.006521] io scheduler mq-deadline registered
+[    0.006523] io scheduler kyber registered
+[    0.012063] Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+[    0.012242] printk: console [ttyS0] disabled
+[    0.012248] 10000000.uart: ttyS0 at MMIO 0x10000000 (irq = 1, base_baud = 230400) is a 8250
+[    0.012533] printk: console [ttyS0] enabled
+[    0.012575] [drm] radeon kernel modesetting enabled.
+[    0.013349] loop: module loaded
+[    0.013383] virtio_blk virtio0: [vda] 24117248 512-byte logical blocks (12.3 GB/11.5 GiB)
+[    0.013390] vda: detected capacity change from 0 to 12348030976
+[    0.013782]  vda: vda1 vda12 vda13 vda14 vda15
+[    0.014058] libphy: Fixed MDIO Bus: probed
+[    0.014186] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.014191] ehci-pci: EHCI PCI platform driver
+[    0.014201] ehci-platform: EHCI generic platform driver
+[    0.014212] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    0.014217] ohci-pci: OHCI PCI platform driver
+[    0.014226] ohci-platform: OHCI generic platform driver
+[    0.014269] usbcore: registered new interface driver uas
+[    0.014281] usbcore: registered new interface driver usb-storage
+[    0.014300] mousedev: PS/2 mouse device common for all mice
+[    0.014337] usbcore: registered new interface driver usbhid
+[    0.014341] usbhid: USB HID core driver
+[    0.014493] NET: Registered protocol family 10
+[    0.014614] Segment Routing with IPv6
+[    0.014629] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    0.014726] NET: Registered protocol family 17
+[    0.014741] Key type dns_resolver registered
+[    0.015313] EXT4-fs (vda1): mounted filesystem with ordered data mode. Opts: (null)
+[    0.015322] VFS: Mounted root (ext4 filesystem) readonly on device 254:1.
+[    0.015352] devtmpfs: mounted
+[    0.015370] Freeing unused kernel memory: 188K
+[    0.023242] Run /sbin/init as init process
+[    0.030164] systemd[1]: System time before build time, advancing clock.
+[    0.032912] systemd[1]: systemd 245.4-4ubuntu3.17 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=hybrid)
+[    0.032942] systemd[1]: Detected architecture riscv64.
+
+Welco[    0.033140] random: fast init done
+me to [1mUbuntu 20.04.5 LTS[0m!
+
+[    0.033186] systemd[1]: Set hostname to <ubuntu>.
+[    0.089014] random: lvmconfig: uninitialized urandom read (4 bytes read)
+[    0.223702] random: systemd: uninitialized urandom read (16 bytes read)
+[    0.223919] systemd[1]: Created slice system-modprobe.slice.
+[[0;32m  OK  [0m] Created slice [0;1;39msystem-modprobe.slice[0m.
+[    0.224032] random: systemd: uninitialized urandom read (16 bytes read)
+[    0.224129] systemd[1]: Created slice system-serial\x2dgetty.slice.
+[[0;32m  OK  [0m] Created slice [0;1;39msystem-serial\x2dgetty.slice[0m.
+[    0.224328] systemd[1]: Created slice system-systemd\x2dfsck.slice.
+[[0;32m  OK  [0m] Created slice [0;1;39msystem-systemd\x2dfsck.slice[0m.
+[    0.224509] systemd[1]: Created slice User and Session Slice.
+[[0;32m  OK  [0m] Created slice [0;1;39mUser and Session Slice[0m.
+[    0.224646] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[[0;32m  OK  [0m] Started [0;1;39mForward Password R…uests to Wall Directory Watch[0m.
+[    0.224803] systemd[1]: Condition check resulted in Arbitrary Executable File Formats File System Automount Point being skipped.
+[    0.224885] systemd[1]: Reached target User and Group Name Lookups.
+[[0;32m  OK  [0m] Reached target [0;1;39mUser and Group Name Lookups[0m.
+[    0.225019] systemd[1]: Reached target Slices.
+[[0;32m  OK  [0m] Reached target [0;1;39mSlices[0m.
+[    0.225126] systemd[1]: Reached target Swap.
+[[0;32m  OK  [0m] Reached target [0;1;39mSwap[0m.
+[    0.225284] systemd[1]: Listening on Device-mapper event daemon FIFOs.
+[[0;32m  OK  [0m] Listening on [0;1;39mDevice-mapper event daemon FIFOs[0m.
+[    0.225454] systemd[1]: Listening on LVM2 poll daemon socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mLVM2 poll daemon socket[0m.
+[    0.225597] systemd[1]: Listening on multipathd control socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mmultipathd control socket[0m.
+[    0.225758] systemd[1]: Listening on Syslog Socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mSyslog Socket[0m.
+[    0.226030] systemd[1]: Listening on fsck to fsckd communication Socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mfsck to fsckd communication Socket[0m.
+[    0.226174] systemd[1]: Listening on initctl Compatibility Named Pipe.
+[[0;32m  OK  [0m] Listening on [0;1;39minitctl Compatibility Named Pipe[0m.
+[    0.227257] systemd[1]: Condition check resulted in Journal Audit Socket being skipped.
+[    0.227339] systemd[1]: Listening on Journal Socket (/dev/log).
+[[0;32m  OK  [0m] Listening on [0;1;39mJournal Socket (/dev/log)[0m.
+[    0.227517] systemd[1]: Listening on Journal Socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mJournal Socket[0m.
+[    0.227738] systemd[1]: Listening on Network Service Netlink Socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mNetwork Service Netlink Socket[0m.
+[    0.227908] systemd[1]: Listening on udev Control Socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mudev Control Socket[0m.
+[    0.228057] systemd[1]: Listening on udev Kernel Socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mudev Kernel Socket[0m.
+[    0.228266] systemd[1]: Condition check resulted in Huge Pages File System being skipped.
+[    0.228664] systemd[1]: Mounting POSIX Message Queue File System...
+         Mounting [0;1;39mPOSIX Message Queue File System[0m...
+[    0.228864] systemd[1]: Condition check resulted in Kernel Debug File System being skipped.
+[    0.228964] systemd[1]: Condition check resulted in Kernel Trace File System being skipped.
+[    0.229553] systemd[1]: Starting Journal Service...
+         Starting [0;1;39mJournal Service[0m...
+[    0.230119] systemd[1]: Starting Set the console keyboard layout...
+         Starting [0;1;39mSet the console keyboard layout[0m...
+[    0.230233] systemd[1]: Condition check resulted in Create list of static device nodes for the current kernel being skipped.
+[    0.230602] systemd[1]: Starting Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+         Starting [0;1;39mMonitoring of LVM…meventd or progress polling[0m...
+[    0.230746] systemd[1]: Condition check resulted in Load Kernel Module drm being skipped.
+[    0.230792] systemd[1]: Condition check resulted in OpenVSwitch configuration for cleanup being skipped.
+[    0.231002] systemd[1]: Condition check resulted in Set Up Additional Binary Formats being skipped.
+[    0.235294] systemd[1]: Starting File System Check on Root Device...
+         Starting [0;1;39mFile System Check on Root Device[0m...
+[    0.236201] systemd[1]: Starting Load Kernel Modules...
+         Starting [0;1;39mLoad Kernel Modules[0m...
+[    0.236732] systemd[1]: Starting udev Coldplug all Devices...
+         Starting [0;1;39mudev Coldplug all Devices[0m...
+[    0.254524] systemd[1]: Starting Uncomplicated firewall...
+         Starting [0;1;39mUncomplicated firewall[0m...
+[    0.255596] systemd[1]: Mounted POSIX Message Queue File System.
+[[0;32m  OK  [0m] Mounted [0;1;39mPOSIX Message Queue File System[0m.
+[    0.258485] systemd[1]: Finished Load Kernel Modules.
+[[0;32m  OK  [0m] Finished [0;1;39mLoad Kernel Modules[0m.
+[    0.262486] systemd[1]: Finished Uncomplicated firewall.
+[[0;32m  OK  [0m] Finished [0;1;39mUncomplicated firewall[0m.
+[    0.262722] systemd[1]: Condition check resulted in FUSE Control File System being skipped.
+[    0.262804] systemd[1]: Condition check resulted in Kernel Configuration File System being skipped.
+[    0.263135] systemd[1]: Started File System Check Daemon to report status.
+[[0;32m  OK  [0m] Started [0;1;39mFile System Check Daemon to report status[0m.
+[    0.263588] systemd[1]: Starting Apply Kernel Variables...
+         Starting [0;1;39mApply Kernel Variables[0m...
+[    0.284261] systemd[1]: Finished File System Check on Root Device.
+[[0;32m  OK  [0m] Finished [0;1;39mFile System Check on Root Device[0m.
+[    0.284728] systemd[1]: Starting Remount Root and Kernel File Systems...
+         Starting [0;1;39mRemount Root and Kernel File Systems[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mApply Kernel Variables[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mRemount Root and Kernel File Systems[0m.
+         Starting [0;1;39mLoad/Save Random Seed[0m...
+         Starting [0;1;39mCreate System Users[0m...
+[[0;32m  OK  [0m] Started [0;1;39mJournal Service[0m.
+         Starting [0;1;39mFlush Journal to Persistent Storage[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mCreate System Users[0m.
+         Starting [0;1;39mCreate Static Device Nodes in /dev[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mCreate Static Device Nodes in /dev[0m.
+         Starting [0;1;39mudev Kernel Device Manager[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mFlush Journal to Persistent Storage[0m.
+[[0;32m  OK  [0m] Started [0;1;39mudev Kernel Device Manager[0m.
+         Starting [0;1;39mNetwork Service[0m...
+[[0;32m  OK  [0m] Found device [0;1;39m/dev/ttyS0[0m.
+[[0;32m  OK  [0m] Found device [0;1;39m/dev/hvc0[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mudev Coldplug all Devices[0m.
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Service[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mMonitoring of LVM… dmeventd or progress polling[0m.
+[[0;32m  OK  [0m] Found device [0;1;39m/dev/disk/by-label/UEFI[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mSet the console keyboard layout[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDispatch Password …ts to Console Directory Watch[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mLocal Encrypted Volumes[0m.
+         Starting [0;1;39mWait for Network to be Configured[0m...
+         Starting [0;1;39mudev Wait for Complete Device Initialization[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mWait for Network to be Configured[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mudev Wait for Complete Device Initialization[0m.
+         Starting [0;1;39mDevice-Mapper Multipath Device Controller[0m...
+[[0;1;31mFAILED[0m] Failed to start [0;1;39mDevice-Map…r Multipath Device Controller[0m.
+See 'systemctl status multipathd.service' for details.
+[[0;32m  OK  [0m] Reached target [0;1;39mLocal File Systems (Pre)[0m.
+         Starting [0;1;39mFile System Check on /dev/disk/by-label/UEFI[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mFile System Check on /dev/disk/by-label/UEFI[0m.
+         Mounting [0;1;39m/boot/efi[0m...
+[    1.508378] FAT-fs (vda15): codepage cp437 not found
+[[0;1;31mFAILED[0m] Failed to mount [0;1;39m/boot/efi[0m.
+See 'systemctl status boot-efi.mount' for details.
+[[0;1;38;5;185mDEPEND[0m] Dependency failed for [0;1;39mLocal File Systems[0m.
+         Starting [0;1;39mSet console font and keymap[0m...
+         Starting [0;1;39mCreate final runt…dir for shutdown pivot root[0m...
+         Starting [0;1;39mTell Plymouth To Write Out Runtime Data[0m...
+         Starting [0;1;39mCreate Volatile Files and Directories[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mCreate final runt…e dir for shutdown pivot root[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mSet console font and keymap[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mTell Plymouth To Write Out Runtime Data[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mCreate Volatile Files and Directories[0m.
+         Starting [0;1;39mNetwork Name Resolution[0m...
+         Starting [0;1;39mNetwork Time Synchronization[0m...
+         Starting [0;1;39mUpdate UTMP about System Boot/Shutdown[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mUpdate UTMP about System Boot/Shutdown[0m.
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Time Synchronization[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Initialization[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily Cleanup of Temporary Directories[0m.
+[[0;32m  OK  [0m] Started [0;1;39mUbuntu Advantage Timer for running repeated jobs[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mPaths[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Time Set[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Time Synchronized[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily apt download activities[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily apt upgrade and clean activities[0m.
+[[0;32m  OK  [0m] Started [0;1;39mPeriodic ext4 Onli…ata Check for All Filesystems[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDiscard unused blocks once a week[0m.
+[[0;32m  OK  [0m] Started [0;1;39mRefresh fwupd metadata regularly[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily rotation of log files[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily man-db regeneration[0m.
+[[0;32m  OK  [0m] Started [0;1;39mMessage of the Day[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mTimers[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mD-Bus System Message Bus Socket[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mOpen-iSCSI iscsid Socket[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mUUID daemon activation socket[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSockets[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mBasic System[0m.
+         Starting [0;1;39mAccounts Service[0m...
+[[0;32m  OK  [0m] Started [0;1;39mD-Bus System Message Bus[0m.
+[[0;32m  OK  [0m] Started [0;1;39mSave initial kernel messages after boot[0m.
+         Starting [0;1;39mRemove Stale Onli…t4 Metadata Check Snapshots[0m...
+[[0;32m  OK  [0m] Started [0;1;39mirqbalance daemon[0m.
+         Starting [0;1;39mDispatcher daemon for systemd-networkd[0m...
+[[0;32m  OK  [0m] Started [0;1;39mSet the CPU Frequency Scaling governor[0m.
+         Starting [0;1;39mSystem Logging Service[0m...
+         Starting [0;1;39mLogin Service[0m...
+         Starting [0;1;39mDisk Manager[0m...
+[[0;32m  OK  [0m] Started [0;1;39mSystem Logging Service[0m.
+         Starting [0;1;39mAuthorization Manager[0m...
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Name Resolution[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mNetwork[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mNetwork is Online[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mHost and Network Name Lookups[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mRemote File Systems (Pre)[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mRemote File Systems[0m.
+         Starting [0;1;39mLSB: automatic crash report generation[0m...
+         Starting [0;1;39mDeferred execution scheduler[0m...
+         Starting [0;1;39mAvailability of block devices[0m...
+[[0;32m  OK  [0m] Started [0;1;39mRegular background program processing daemon[0m.
+         Starting [0;1;39mOpenBSD Secure Shell server[0m...
+         Starting [0;1;39mPermit User Sessions[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mAvailability of block devices[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDeferred execution scheduler[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mPermit User Sessions[0m.
+         Starting [0;1;39mHold until boot process finishes up[0m...
+         Starting [0;1;39mTerminate Plymouth Boot Screen[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mHold until boot process finishes up[0m.
+[[0;32m  OK  [0m] Started [0;1;39mSerial Getty on hvc0[0m.
+[[0;32m  OK  [0m] Started [0;1;39mSerial Getty on ttyS0[0m.
+         Starting [0;1;39mSet console scheme[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mTerminate Plymouth Boot Screen[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mSet console scheme[0m.
+[[0;32m  OK  [0m] Created slice [0;1;39msystem-getty.slice[0m.
+[[0;32m  OK  [0m] Started [0;1;39mGetty on tty1[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mLogin Prompts[0m.
+[[0;32m  OK  [0m] Started [0;1;39mAuthorization Manager[0m.
+[[0;32m  OK  [0m] Started [0;1;39mAccounts Service[0m.
+[[0;32m  OK  [0m] Started [0;1;39mLogin Service[0m.
+[[0;32m  OK  [0m] Started [0;1;39mUnattended Upgrades Shutdown[0m.
+[[0;32m  OK  [0m] Started [0;1;39mLSB: automatic crash report generation[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDisk Manager[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDispatcher daemon for systemd-networkd[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mLoad/Save Random Seed[0m.
+[[0;32m  OK  [0m] Started [0;1;39mOpenBSD Secure Shell server[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mMulti-User System[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mRemove Stale Onli…ext4 Metadata Check Snapshots[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mGraphical Interface[0m.
+         Starting [0;1;39mUpdate UTMP about System Runlevel Changes[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mUpdate UTMP about System Runlevel Changes[0m.
+
+Ubuntu 20.04.5 LTS ubuntu ttyS0
+
+ubuntu login: root (automatic login)
+
+Welcome to Ubuntu 20.04.5 LTS (GNU/Linux 5.10.0 riscv64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sun Aug 28 16:42:49 UTC 2022
+
+  System load: 0.0                Memory usage: 3%   Processes:       84
+  Usage of /:  84.5% of 10.98GB   Swap usage:   0%   Users logged in: 0
+
+ * Super-optimized for small spaces - read how we shrank the memory
+   footprint of MicroK8s to make it the smallest full K8s around.
+
+   https://ubuntu.com/blog/microk8s-memory-optimisation
+
+10 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+New release '22.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Sun Aug 28 16:42:51 UTC 2022 on hvc0
+now reading runscript
+Done reading workloads
+Workload detected
+Reset stats
+runspec v4662 - Copyright 1999-2006 Standard Performance Evaluation Corporation
+Using 'unknown' tools
+Reading MANIFEST... 17932 files
+Loading runspec modules...............
+Locating benchmarks...found 31 benchmarks in 12 benchsets.
+Locating output formats: ASCII, config, CSV, flags, HTML, mail, PDF, PostScript, raw, Screen, Submission Check
+Reading config file '/home/ubuntu/spec2006/mnt/config/myconfig.cfg'
+Benchmarks selected: 401.bzip2
+Compiling Binaries
+  Up to date 401.bzip2 test base riscv default
+
+
+Parsing Flags
+  Looking at 401.bzip2 base riscv default: done
+Flag Parsing Complete
+
+Setting Up Run Directories
+  Setting up 401.bzip2 test base riscv default: created (run_base_test_riscv.0001)
+Running Benchmarks
+  Running 401.bzip2 test base riscv default
+Success: 1x401.bzip2
+Producing Reports
+mach: default
+  ext: riscv
+    size: test
+      set: int
+        format: raw -> /home/ubuntu/spec2006/mnt/result/CINT2006.002.test.rsf
+        format: flags -> /home/ubuntu/spec2006/mnt/result/CINT2006.002.test.flags.html
+        format: ASCII -> /home/ubuntu/spec2006/mnt/result/CINT2006.002.test.txt
+        format: CSV -> /home/ubuntu/spec2006/mnt/result/CINT2006.002.test.csv
+        format: HTML -> /home/ubuntu/spec2006/mnt/result/CINT2006.002.test.html, CINT2006.002.test.gif
+      set: fp
+
+The log for this run is in /home/ubuntu/spec2006/mnt/result/CPU2006.002.log
+
+runspec finished at Sun Aug 28 16:43:59 2022; 66 total seconds elapsed
+Opening "/home/ubuntu/spec2006/mnt/result/CINT2006.002.test.csv".
+Wrote 3561 bytes.
+Opening "/home/ubuntu/spec2006/mnt/result/CINT2006.002.test.flags.html".
+Wrote 16459 bytes.
+Opening "/home/ubuntu/spec2006/mnt/result/CINT2006.002.test.gif".
+Wrote 4734 bytes.
+Opening "/home/ubuntu/spec2006/mnt/result/CINT2006.002.test.html".
+Wrote 39462 bytes.
+Opening "/home/ubuntu/spec2006/mnt/result/CINT2006.002.test.rsf".
+Wrote 9132 bytes.
+Opening "/home/ubuntu/spec2006/mnt/result/CINT2006.002.test.txt".
+Wrote 8407 bytes.
+Opening "/home/ubuntu/spec2006/mnt/result/CINT2006.003.test.csv".
+Wrote 3561 bytes.
+Opening "/home/ubuntu/spec2006/mnt/result/CINT2006.003.test.flags.html".
+Wrote 16459 bytes.
+Opening "/home/ubuntu/spec2006/mnt/result/CINT2006.003.test.gif".
+Wrote 4734 bytes.
+Opening "/home/ubuntu/spec2006/mnt/result/CINT2006.003.test.html".
+Wrote 39462 bytes.
+Opening "/home/ubuntu/spec2006/mnt/result/CINT2006.003.test.rsf".
+Wrote 9132 bytes.
+Opening "/home/ubuntu/spec2006/mnt/result/CINT2006.003.test.txt".
+Wrote 8407 bytes.
+Opening "/home/ubuntu/spec2006/mnt/result/CPU2006.001.log".
+Wrote 3034277 bytes.
+Opening "/home/ubuntu/spec2006/mnt/result/CPU2006.002.log".
+Wrote 4083 bytes.
+Opening "/home/ubuntu/spec2006/mnt/result/CPU2006.003.log".
+Wrote 4104 bytes.
+Opening "/home/ubuntu/spec2006/mnt/result/CPU2006.lock".
+Wrote 4 bytes.
+Opening "/home/ubuntu/spec2006/mnt/result/invalid.gif".
+Wrote 8846 bytes.
+root@ubuntu:/home/ubuntu/spec2006/mnt# 

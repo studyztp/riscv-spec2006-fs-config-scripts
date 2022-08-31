@@ -1,140 +1,154 @@
 import os
 import argparse
+import m5
 from xmlrpc.client import MAXINT
-from gem5.components.boards.x86_board import X86Board
-from gem5.components.cachehierarchies.classic.private_l1_private_l2_cache_hierarchy import \
-    PrivateL1PrivateL2CacheHierarchy
-from gem5.components.memory import DualChannelDDR4_2400
+from gem5.components.boards.riscv_board import RiscvBoard
+from gem5.components.cachehierarchies.classic.private_l1_private_l2_cache_hierarchy import (
+    PrivateL1PrivateL2CacheHierarchy,
+)
+from gem5.components.memory import DualChannelDDR4_2400, SingleChannelDDR4_2400
 from gem5.components.processors.cpu_types import CPUTypes
 from gem5.components.processors.simple_processor import SimpleProcessor
-from gem5.components.processors.simpoint import SimPoint
+from gem5.utils.simpoint import SimPoint
 from gem5.isas import ISA
 from gem5.resources.resource import CustomDiskImageResource, Resource
 from gem5.simulate.exit_event import ExitEvent
+from gem5.simulate.exit_event_generators import dump_reset_generator
 from gem5.simulate.simulator import Simulator
 from m5.stats import dump, reset
 from pathlib import Path
-from gem5.simulate.exit_event_generators import (
-    simpoint_save_checkpoint_generator,
-)
-from gem5.components.processors.simple_switchable_processor import(
+
+from gem5.components.processors.simple_switchable_processor import (
     SimpleSwitchableProcessor,
 )
+import time
+from m5.util import warn
+
+# Build errors: 416.gamess(base), 447.dealII(base), 450.soplex(base),
+# 483.xalancbmk(base)
+# Build successes: 400.perlbench(base), 401.bzip2(base), 403.gcc(base),
+# 410.bwaves(base), 429.mcf(base), 433.milc(base), 434.zeusmp(base),
+# 435.gromacs(base), 436.cactusADM(base), 437.leslie3d(base), 444.namd(base),
+# 445.gobmk(base), 453.povray(base), 454.calculix(base), 456.hmmer(base),
+# 458.sjeng(base), 459.GemsFDTD(base), 462.libquantum(base), 464.h264ref(base),
+# 465.tonto(base), 470.lbm(base), 471.omnetpp(base), 473.astar(base),
+# 481.wrf(base), 482.sphinx3(base), 998.specrand(base), 999.specrand(base)
+
+benchmark_choices = [
+    "400.perlbench",
+    "401.bzip2",
+    "403.gcc",
+    "410.bwaves",
+    "429.mcf",
+    "433.milc",
+    "434.zeusmp",
+    "435.gromacs",
+    "436.cactusADM",
+    "437.leslie3d",
+    "444.namd",
+    "445.gobmk",
+    "453.povray",
+    "454.calculix",
+    "456.hmmer",
+    "458.sjeng",
+    "459.GemsFDTD",
+    "462.libquantum",
+    "464.h264ref",
+    "465.tonto",
+    "470.lbm",
+    "471.omnetpp",
+    "473.astar",
+    "481.wrf",
+    "482.sphinx3",
+    "998.specrand",
+    "999.specrand",
+]
+
+size_choices = ["test", "train", "ref"]
 
 parser = argparse.ArgumentParser(
-    description="An fs restore checkpoint scrpit."
+    description="An example configuration script to run the \
+        SPEC CPU2006 benchmarks."
+)
+
+parser.add_argument(
+    "--benchmark",
+    type=str,
+    required=True,
+    help="Input the benchmark program to execute.",
+    choices=benchmark_choices,
+)
+
+parser.add_argument(
+    "--size",
+    type=str,
+    required=True,
+    help="Sumulation size the benchmark program.",
+    choices=size_choices,
 )
 
 parser.add_argument(
     "--checkpoint_dir",
     type=str,
     required=True,
+    help="Where to restore the checkpoint.",
 )
 
-parser.add_argument(
-    "--N",
-    type=int,
-    required=True,
-)
-
-parser.add_argument(
-    "--warmup",
-    type=int,
-    required=True,
-)
 
 args = parser.parse_args()
 
+output_dir = "speclogs_" + "".join(x.strip() for x in time.asctime().split())
+output_dir = output_dir.replace(":", "")
+
+try:
+    os.makedirs(os.path.join(m5.options.outdir, output_dir))
+except FileExistsError:
+    warn("output directory already exists!")
+
 cache_hierarchy = PrivateL1PrivateL2CacheHierarchy(
-    l1d_size = "32kB",
+    l1d_size="32kB",
     l1i_size="32kB",
     l2_size="256kB",
 )
 
-memory = DualChannelDDR4_2400(size = "3GB")
-
-# processor = SimpleSwitchableProcessor(
-#     starting_core_type=CPUTypes.KVM,
-#     switch_core_type=CPUTypes.O3,
-#     num_cores= 1,
-#     isa = ISA.X86,
-# )
+memory = SingleChannelDDR4_2400()
 
 processor = SimpleProcessor(
     cpu_type=CPUTypes.O3,
-    num_cores= 1,
-    isa = ISA.X86,
+    num_cores=1,
+    isa=ISA.RISCV,
 )
 
-board = X86Board(
+board = RiscvBoard(
     clk_freq="3GHz",
     processor=processor,
     memory=memory,
     cache_hierarchy=cache_hierarchy,
 )
 
-command= "/home/gem5/single_thread_binaries/basicmath/basicmath_large;"\
-    +"sleep 5;" \
-    + "m5 exit;"
-
-simpoint = SimPoint(
-    simpoint_file_path = Path("/home/studyztp/internal_review/verify_pic/basicmath/basicmath_large.simpts"),
-    weight_file_path = Path("/home/studyztp/internal_review/verify_pic/basicmath/basicmath_large.weights"),
-    simpoint_interval = 100000000,
-    warmup_interval = args.warmup
-)
+command = "{} {} {}".format(args.benchmark, args.size, output_dir)
 
 board.set_kernel_disk_workload(
-    # The x86 linux kernel will be automatically downloaded to the
-    # `~/.cache/gem5` directoary if not already present.
-    # npb benchamarks was tested with kernel version 4.19.83
     kernel=Resource(
-        "x86-linux-kernel-5.4.49",
+        "riscv-bootloader-vmlinux-5.10",
     ),
-    # The x86-npb image will be automatically downloaded to the
-    # `~/.cache/gem5` directory if not already present.
     disk_image=CustomDiskImageResource(
-    os.path.join(
-        os.path.expanduser("~"),
-        "/home/studyztp/disk/disk-image/ubuntu-x86-single-thread-binaries-image/ubuntu-x86-single-thread-binaries"),
-    disk_root_partition = "1"
+        os.path.join(
+            os.path.expanduser("~"),
+            "/home/studyztp/data/SPEC2006-riscv-test/benchmarks/disk/riscv64-ubuntu-SPEC2006.img",
+        ),
+        disk_root_partition="1",
     ),
     readfile_contents=command,
 )
 
 dir = Path(args.checkpoint_dir).as_posix()
 
-def max_inst():
-    warmed_up = False
-    while True:
-        if warmed_up:
-            print("end of SimPoint interval")
-            yield True
-        else:
-            print("end of warmup, starting to simulate SimPoint")
-            warmed_up = True
-            # schedule a MAX_INSTS exit event during the simulation
-            simulator.schedule_max_insts(simpoint.get_simpoint_interval())
-            dump()
-            reset()
-            yield False
-
-
 simulator = Simulator(
-    full_system= True,
-    board=board,
+    full_system=True,
     checkpoint_path=dir,
-    on_exit_event={
-        ExitEvent.MAX_INSTS: max_inst()
-    }
+    board=board,
+    on_exit_event={ExitEvent.EXIT: dump_reset_generator()},
 )
-warmup_len = simpoint.get_warmup_list()[args.N]
-if warmup_len == 0:
-    warmup_len = 1
-simulator.schedule_max_insts(warmup_len , True)
-simulator.run()
 
-print(f"simpoint_insts: {simpoint.get_simpoint_start_insts()}\n")
-print(f"simpoint_length: {simpoint.get_simpoint_interval()}\n")
-print(f"simpoint_warmup: {simpoint.get_warmup_list()}\n")
-print(f"simpoint_weight: {simpoint.get_weight_list()}\n")
+simulator.run()

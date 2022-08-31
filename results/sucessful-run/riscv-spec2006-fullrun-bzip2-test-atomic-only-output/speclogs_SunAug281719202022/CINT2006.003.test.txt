@@ -1,0 +1,132 @@
+##############################################################################
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+#                                                                            #
+# 'reportable' flag not set during run                                       #
+# 471.omnetpp base did not have enough runs!                                 #
+# 456.hmmer base did not have enough runs!                                   #
+# 445.gobmk base did not have enough runs!                                   #
+# 458.sjeng base did not have enough runs!                                   #
+# 429.mcf base did not have enough runs!                                     #
+# 473.astar base did not have enough runs!                                   #
+# 483.xalancbmk base did not have enough runs!                               #
+# 400.perlbench base did not have enough runs!                               #
+# 464.h264ref base did not have enough runs!                                 #
+# 462.libquantum base did not have enough runs!                              #
+# 401.bzip2 base did not have enough runs!                                   #
+# 403.gcc base did not have enough runs!                                     #
+# Input set must be 'ref' for a valid run (set to 'test' for this run)       #
+# Unknown flags were used! See                                               #
+#      http://www.spec.org/auto/cpu2006/Docs/runspec.html#flagsurl           #
+# for information about how to get rid of this error.                        #
+#                                                                            #
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+##############################################################################
+                           SPEC(R) CINT2006 Summary
+               Berkeley Architecture Research Unknown HW Model
+                           Sun Aug 28 16:42:53 2022
+
+CPU2006 License #0     Test date: --           Hardware availability: Dec-9999
+Test sponsor: Test Sponsor (Optional, defaults to hw_vendor)  Software availability: Jan-2017
+Tested by: (Optional, defaults to hw_vendor)
+
+                                  Estimated                       Estimated
+                Base     Base       Base        Peak     Peak       Peak
+Benchmarks      Ref.   Run Time     Ratio       Ref.   Run Time     Ratio
+-------------- ------  ---------  ---------    ------  ---------  ---------
+400.perlbench                               NR                                 
+401.bzip2          --       47.7         -- S                                  
+403.gcc                                     NR                                 
+429.mcf                                     NR                                 
+445.gobmk                                   NR                                 
+456.hmmer                                   NR                                 
+458.sjeng                                   NR                                 
+462.libquantum                              NR                                 
+464.h264ref                                 NR                                 
+471.omnetpp                                 NR                                 
+473.astar                                   NR                                 
+483.xalancbmk                               NR                                 
+==============================================================================
+400.perlbench                               NR                                 
+401.bzip2          --       47.7         -- S                                  
+403.gcc                                     NR                                 
+429.mcf                                     NR                                 
+445.gobmk                                   NR                                 
+456.hmmer                                   NR                                 
+458.sjeng                                   NR                                 
+462.libquantum                              NR                                 
+464.h264ref                                 NR                                 
+471.omnetpp                                 NR                                 
+473.astar                                   NR                                 
+483.xalancbmk                               NR                                 
+ Est. SPECint(R)_base2006                --
+ Est. SPECint2006                                                   Not Run
+
+
+                                   HARDWARE
+                                   --------
+            CPU Name: Unknown RISC-V CPU 
+ CPU Characteristics:  
+             CPU MHz: 1000
+                 FPU: Integrated
+      CPU(s) enabled: number of cores enabled cores, 1 chip, number of cores manufactured into each chip cores/chip, number of threads enabled per core threads/core
+    CPU(s) orderable: 1,2 chips
+       Primary Cache: 9999 MB I + 9999 MB D on chip per chip
+     Secondary Cache: 9999 MB I+D on chip per chip
+            L3 Cache: 9999 MB I+D off chip per chip
+         Other Cache: None
+              Memory: 4 GB
+      Disk Subsystem: 1 1TB Mystery Disk
+      Other Hardware: None
+
+
+                                   SOFTWARE
+                                   --------
+    Operating System: RISC-V Proxy-Kernel Version Unknown
+            Compiler: gcc, g++ 6.1
+       Auto Parallel: --
+         File System: Unknown File System
+        System State: Multi-user
+       Base Pointers: 64-bit
+       Peak Pointers: 64-bit
+      Other Software: None
+
+
+                              Base Unknown Flags
+                              ------------------
+ 401.bzip2: "/usr/bin/riscv64-linux-gnu-gcc -static -Wl,-Ttext-segment,0x10000" (in CC)
+            "/usr/bin/riscv64-linux-gnu-gcc -static -Wl,-Ttext-segment,0x10000" (in LD)
+            "-O2 -fno-strict-aliasing" (in COPTIMIZE)
+
+
+    SPEC and SPECint are registered trademarks of the Standard Performance
+    Evaluation Corporation.  All other brand and product names appearing
+    in this result are trademarks or registered trademarks of their
+    respective holders.
+##############################################################################
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+#                                                                            #
+# 'reportable' flag not set during run                                       #
+# 471.omnetpp base did not have enough runs!                                 #
+# 456.hmmer base did not have enough runs!                                   #
+# 445.gobmk base did not have enough runs!                                   #
+# 458.sjeng base did not have enough runs!                                   #
+# 429.mcf base did not have enough runs!                                     #
+# 473.astar base did not have enough runs!                                   #
+# 483.xalancbmk base did not have enough runs!                               #
+# 400.perlbench base did not have enough runs!                               #
+# 464.h264ref base did not have enough runs!                                 #
+# 462.libquantum base did not have enough runs!                              #
+# 401.bzip2 base did not have enough runs!                                   #
+# 403.gcc base did not have enough runs!                                     #
+# Input set must be 'ref' for a valid run (set to 'test' for this run)       #
+# Unknown flags were used! See                                               #
+#      http://www.spec.org/auto/cpu2006/Docs/runspec.html#flagsurl           #
+# for information about how to get rid of this error.                        #
+#                                                                            #
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+##############################################################################
+-----------------------------------------------------------------------------
+For questions about this result, please contact the tester.
+For other inquiries, please contact webmaster@spec.org.
+Copyright 2006 Standard Performance Evaluation Corporation
+Generated on Sun Aug 28 16:43:59 2022 by SPEC CPU2006 ASCII formatter v4626
